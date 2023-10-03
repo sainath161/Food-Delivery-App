@@ -594,9 +594,9 @@ footer {
     }
 }
 
-@media (max-width: 1468px) {
+@media (max-width: 1384px) {
     #recipeContainer {
-        margin-top: -18.9%;
+        margin-top: -18%;
 
     }
 
