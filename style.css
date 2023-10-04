@@ -430,9 +430,10 @@ nav a:hover {
     cursor: pointer;
 }
 
-.active, .btn:hover {
+.active,
+.btn:hover {
     color: #4D9E30;
-  }
+}
 
 .profile {
     margin-right: 2rem;
@@ -714,6 +715,7 @@ footer {
         height: 40%;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
+    
     .carousel-text {
         color: #fff;
         padding: 20px;
@@ -858,6 +860,12 @@ footer {
     .type-filter {
         display: grid;
         column-gap: 50px;
+    }
+
+    .filter-container button {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
     }
 }
 
@@ -1041,11 +1049,11 @@ footer {
         color: #dc582a;
     }
 
-    .subscribe{
+    .subscribe {
         width: 100%;
     }
 
-    #emailInput{
+    #emailInput {
         width: 100% !important;
     }
 }
