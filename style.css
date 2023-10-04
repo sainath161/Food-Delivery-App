@@ -530,14 +530,20 @@ footer {
 .subscribe button {
     margin-top: 10px;
     background-color: #509e2f;
-    /* Customize the button background color */
     color: #fff;
-    /* Customize the button text color */
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     height: 5vh;
+    font-size: 14px;
+}
+
+.subscribe button:hover {
+    background-color: #338f0b;
+    font-weight: 500;
+    transform: scale(1.05);
+    transition: all 0.4s ease;
 }
 
 .para {

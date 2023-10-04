@@ -325,3 +325,22 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleMenuIcon();
     window.addEventListener("resize", toggleMenuIcon);
 });
+
+// Get the subscribe button and email input element
+const subscribeButton = document.getElementById("subscribeButton");
+const emailInput = document.getElementById("emailInput");
+
+// Add an event listener to the subscribe button
+subscribeButton.addEventListener("click", () => {
+    // Get the user's provided email
+    const userEmail = emailInput.value.trim();
+
+    // Check if the provided email is not empty
+    if (userEmail !== "") {
+        // Create a mailto link with the provided email
+        const mailtoLink = `mailto:${userEmail}`;
+
+        // Open the default email client with the mailto link
+        window.location.href = mailtoLink;
+    }
+});
