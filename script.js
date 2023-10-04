@@ -162,11 +162,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
                 <div class="recipe-time-action">
-                <p class="recipe-time">${recipe.time}</p>
-                <div class="recipe-actions">
-                <i class="material-icons like-button">${recipe.isLiked ? "favorite" : "favorite_border"}</i>
-                    <i class="material-icons chat">chat</i>
-                </div>
+                    <p class="recipe-time">${recipe.time}</p>
+                    <div class="recipe-actions">
+                        <i class="material-icons like-button">${recipe.isLiked ? "favorite" : "favorite_border"}</i>
+                        <i class="material-icons chat-button">chat</i>
+                    </div>
                 </div>
             </div>
         `;
@@ -178,7 +178,67 @@ document.addEventListener("DOMContentLoaded", function () {
             likeButton.textContent = recipe.isLiked ? "favorite" : "favorite_border";
         });
 
+        // Add an event listener to the chat button to open the chat box
+        const chatButton = recipeCard.querySelector(".chat-button");
+        chatButton.addEventListener("click", () => {
+            openChatBox();
+        });
+
         recipeContainer.appendChild(recipeCard);
+    }
+
+    // Function to display recipes
+    function displayRecipes(recipesToDisplay) {
+        recipeContainer.innerHTML = "";
+        recipesToDisplay.forEach((recipe) => {
+            createRecipeCard(recipe);
+        });
+    }
+
+    // Function to open the chat box
+    function openChatBox() {
+        const chatBox = document.createElement("div");
+        chatBox.classList.add("chat-box");
+        chatBox.innerHTML = `
+        <div class="chat-header">
+            <span class="chat-close" id="chatClose">&times;</span>
+        </div>
+        <div class="chat-content">
+            <div class="chat-messages">
+                <div class="chat-messaging">Hello</div>
+            </div>
+            <input type="text" class="chat-input" placeholder="Type your message here...">
+            <button class="chat-send">Send</button>
+        </div>
+    `;
+        document.body.appendChild(chatBox);
+
+        const chatClose = chatBox.querySelector("#chatClose");
+        const chatInput = chatBox.querySelector(".chat-input");
+        const chatSend = chatBox.querySelector(".chat-send");
+
+        // Add an event listener to close the chat box
+        chatClose.addEventListener("click", () => {
+            closeChatBox(chatBox);
+        });
+
+        // Add an event listener to send a message
+        chatSend.addEventListener("click", () => {
+            const message = chatInput.value.trim();
+            if (message !== "") {
+                const chatMessages = chatBox.querySelector(".chat-messages");
+                const messageElement = document.createElement("div");
+                messageElement.classList.add("chat-message");
+                messageElement.textContent = message;
+                chatMessages.appendChild(messageElement);
+                chatInput.value = "";
+            }
+        });
+    }
+
+    // Function to close the chat box
+    function closeChatBox(chatBox) {
+        document.body.removeChild(chatBox);
     }
 
     // Function to display recipes
