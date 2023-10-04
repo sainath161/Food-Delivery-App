@@ -430,11 +430,6 @@ nav a:hover {
     cursor: pointer;
 }
 
-.active,
-.btn:hover {
-    color: #4D9E30;
-}
-
 .profile {
     margin-right: 2rem;
 }
@@ -715,7 +710,7 @@ footer {
         height: 40%;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
-    
+
     .carousel-text {
         color: #fff;
         padding: 20px;
