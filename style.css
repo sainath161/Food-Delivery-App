@@ -430,6 +430,10 @@ nav a:hover {
     cursor: pointer;
 }
 
+.active, .btn:hover {
+    color: #4D9E30;
+  }
+
 .profile {
     margin-right: 2rem;
 }
@@ -695,9 +699,9 @@ footer {
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1135px) {
     #recipeContainer {
-        margin-top: -17%;
+        margin-top: -20%;
 
     }
 
@@ -709,6 +713,31 @@ footer {
         width: 25%;
         height: 40%;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .carousel-text {
+        color: #fff;
+        padding: 20px;
+        padding-left: 100px;
+        position: absolute;
+        bottom: 0;
+        padding-left: 50px;
+
+    }
+
+    .carousel-text h1 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-text p {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-text h3 {
+        font-size: 14px;
+        font-weight: bold;
+        color: #dc582a;
     }
 }
 
@@ -802,7 +831,7 @@ footer {
         color: #fff;
         position: absolute;
         bottom: 0;
-        width: 90%;
+        width: 50%;
         height: 100%;
         display: flex;
         /* Align text to the left and in the center */
@@ -876,9 +905,10 @@ footer {
         color: #fff;
         position: absolute;
         bottom: 0;
-        width: 90%;
+        width: 40%;
         height: 100%;
-        padding: 10px;
+        padding: 0;
+        padding-left: 10px;
         display: flex;
         /* Align text to the left and in the center */
         align-items: flex-start;
@@ -902,9 +932,74 @@ footer {
     }
 }
 
-@media (max-width: 270px) {
+@media (max-width: 310px) {
     #sidebar {
         width: 90%;
+        /* Remove fixed position on smaller screens */
+    }
+
+    #recipeContainer {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .recipe-card {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        width: 100%;
+        height: 40%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-text {
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        height: 100%;
+        padding: 0;
+        padding-left: 10px;
+        display: flex;
+        /* Align text to the left and in the center */
+        justify-content: center;
+    }
+
+    .carousel-text h1 {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-text p {
+        font-size: 8px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-text h3 {
+        font-size: 9px;
+        font-weight: bold;
+        color: #dc582a;
+    }
+}
+
+@media (max-width: 270px) {
+    #sidebar {
+        width: 85%;
+    }
+
+    #recipeContainer {
+        margin-left: 0;
+        margin-top: 5%;
+        width: 85%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .recipe-card {
@@ -915,6 +1010,43 @@ footer {
         width: 100%;
         height: 45%;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-text {
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        height: 100%;
+        padding: 0;
+        padding-left: 10px;
+        display: flex;
+        /* Align text to the left and in the center */
+        justify-content: center;
+    }
+
+    .carousel-text h1 {
+        font-size: 9px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-text p {
+        font-size: 7px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-text h3 {
+        font-size: 8px;
+        font-weight: bold;
+        color: #dc582a;
+    }
+
+    .subscribe{
+        width: 100%;
+    }
+
+    #emailInput{
+        width: 100% !important;
     }
 }
 
